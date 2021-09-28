@@ -1,0 +1,3 @@
+[submodule "modules"]
+	path = modules
+	url = beango@vs-ssh.visualstudio.com:v3/beango/beanfun!%20SRE/terraform-modules
