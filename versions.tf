@@ -16,12 +16,12 @@ terraform {
 
 provider "google" {
   project = "bf-azure-uat"
-  region  = "asia-east1"
-  zone    = "asia-east1-a"
+  region  = "us-west1"
+  zone    = "us-west1-a"
 }
 
 provider "google-beta" {
   project = "bf-azure-uat"
-  region  = "asia-east1"
-  zone    = "asia-east1-a"
+  region  = "us-west1"
+  zone    = "us-west1-a"
 }
