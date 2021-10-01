@@ -1,9 +1,13 @@
-# --- general settings ---
+# project settings #
+resource_tags = {
+  environment = "uat"
+  unit        = "azure"
+}
 
-# project default subnet, first subnet in whole large subnet area
+# project default subnet, first subnet in whole large subnet area #
 default_cidr = "10.1.1.0/24"
 
-# allow connection ip from office and openvpn
+# allow connection ip from office and openvpn #
 allow_ips = [
   {
     name  = "gamania-family-001",
@@ -19,7 +23,7 @@ allow_ips = [
   }
 ]
 
-# allow connection ip address from gamania
+# allow connection ip address from gamania #
 gamania_ips = [
   {
     name  = "gamania-gmobile"
@@ -31,12 +35,67 @@ gamania_ips = [
   }
 ]
 
-# --- project specified settings ---
+# gke begin #
+
+gitlab_runner_ips = [
+  # FIXEME Remove after gitlab migration
+  {
+    name  = "gitlab-runner-pilot"
+    value = "35.197.13.60"
+  },
+  {
+    name  = "gitlab-runner-pilot-20210909"
+    value = "34.82.27.168"
+  },
+  {
+    name  = "gitlab-runner-pilot-20210913"
+    value = "35.233.223.52"
+  },
+  {
+    name  = "gitlab-runner-pilot-20210923"
+    value = "35.199.170.232"
+  },
+  {
+    name  = "gitlab-runner-pilot-20210924"
+    value = "34.105.22.224"
+  }
+]
 
 gke_cidrs = {
-  gke_or_dataplane     = "10.64.32.0/24"
-  gke_or_controllplane = "10.64.34.0/28"
-  gke_or_pod           = "10.64.0.0/19"
-  gke_or_svc           = "10.64.33.0/24"
-  gke_or_glb           = "10.128.64.0/25"
+  gke_or_dataplane     = "10.6.132.0/24"
+  gke_or_controllplane = "10.6.136.0/28"
+  gke_or_pod           = "10.6.0.0/18"
+  gke_or_svc           = "10.6.128.0/24"
+  gke_or_glb           = "10.6.140.0/24"
+
+  gke_tw_dataplane     = "10.4.132.0/24"
+  gke_tw_controllplane = "10.4.136.0/28"
+  gke_tw_pod           = "10.4.0.0/18"
+  gke_tw_svc           = "10.4.128.0/24"
+  gke_tw_glb           = "10.4.140.0/24"
 }
+
+node_pool-autoscaling = {
+  or = {
+    default-node-pool = {
+      min_node_count = 1
+      max_node_count = 3
+    }
+    large-node-pool = {
+      min_node_count = 1
+      max_node_count = 3
+    }
+  }
+  tw = {
+    default-node-pool = {
+      min_node_count = 1
+      max_node_count = 3
+    }
+  }
+}
+
+# gke end #
+
+# project specified settings #
+
+# TBD #
