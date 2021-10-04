@@ -1,7 +1,7 @@
 # project settings #
 resource_tags = {
   environment = "uat"
-  unit        = "azure"
+  unit        = "beanfun"
 }
 
 # project default subnet, first subnet in whole large subnet area #

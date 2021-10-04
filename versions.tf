@@ -7,7 +7,7 @@ terraform {
   }
 
   backend "gcs" {
-    bucket = "bf-azure-uat-terraform-state"
+    bucket = "bf-beanfun-uat-terraform-state"
     prefix = "terraform/state"
   }
 
@@ -15,13 +15,13 @@ terraform {
 }
 
 provider "google" {
-  project = "bf-azure-uat"
+  project = "bf-beanfun-uat"
   region  = "us-west1"
   zone    = "us-west1-a"
 }
 
 provider "google-beta" {
-  project = "bf-azure-uat"
+  project = "bf-beanfun-uat"
   region  = "us-west1"
   zone    = "us-west1-a"
 }

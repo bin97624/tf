@@ -1,6 +1,6 @@
 #!/bin/sh
 
-PROJECT_NAME=bf-azure-uat
+PROJECT_NAME=bf-beanfun-uat
 COMPUTE_ZONE=asia-east1-a
 
 gcloud config set project ${PROJECT_NAME}
