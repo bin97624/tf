@@ -1,5 +1,5 @@
 module "data" {
-  source        = "./modules/project/bf-azure-uat"
+  source        = "./modules/project/bf-beanfun-uat"
 
   resource_tags = var.resource_tags
   allow_ips     = var.allow_ips
