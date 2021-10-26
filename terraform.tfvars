@@ -1,4 +1,5 @@
 # project settings #
+
 resource_tags = {
   environment = "uat"
   unit        = "beanfun"
@@ -34,6 +35,8 @@ gamania_ips = [
     value = "61.216.89.230"
   }
 ]
+
+app_engine_region = "us-west1"
 
 # gke begin #
 

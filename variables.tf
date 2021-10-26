@@ -26,6 +26,10 @@ variable "gamania_ips" {
   )
 }
 
+variable "app_engine_region" {
+  type = string
+}
+
 # gke begin #
 
 variable "gitlab_runner_ips" {

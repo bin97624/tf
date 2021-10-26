@@ -1,10 +1,11 @@
 module "data" {
-  source        = "./modules/project/bf-beanfun-uat"
+  source            = "./modules/project/bf-beanfun-uat"
 
-  resource_tags = var.resource_tags
-  allow_ips     = var.allow_ips
+  resource_tags     = var.resource_tags
+  allow_ips         = var.allow_ips
+  app_engine_region = var.app_engine_region
 
-  default_cidr  = var.default_cidr
+  default_cidr      = var.default_cidr
 
   # gke begin #
 
