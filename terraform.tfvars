@@ -61,6 +61,10 @@ gitlab_runner_ips = [
   {
     name  = "gitlab-runner-pilot-20210924"
     value = "34.105.22.224"
+  },
+  {
+    name  = "azure-aks-link-gcp-001"
+    value = "20.210.32.84"
   }
 ]
 
