@@ -11,7 +11,7 @@ terraform {
     prefix = "terraform/state"
   }
 
-  required_version = "~> 1.0.0"
+  required_version = "~> 1.1.0"
 }
 
 provider "google" {
