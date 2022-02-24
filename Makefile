@@ -1,4 +1,4 @@
-.PHONY: apply force-init init plan update
+.PHONY: apply force-init init init-upgrade plan update
 
 apply:
 	@if [ -d "secrets" -a -f "secrets/mysql_users.tfvars" ]; then \
@@ -12,6 +12,9 @@ force-init:
 
 init:
 	terraform init
+
+init-upgrade:
+	terraform init -upgrade
 
 plan:
 	@if [ -d "secrets" -a -f "secrets/mysql_users.tfvars" ]; then \
