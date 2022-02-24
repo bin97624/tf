@@ -82,6 +82,16 @@ gke_cidrs = {
   gke_tw_glb           = "10.4.140.0/24"
 }
 
+gke_cidrs-settings = {
+  or = {
+    gke_dataplane     = "10.6.132.0/24"
+    gke_controllplane = "10.6.136.0/28"
+    gke_pod           = "10.6.0.0/18"
+    gke_svc           = "10.6.128.0/24"
+    gke_glb           = "10.6.140.0/24"
+  }
+}
+
 node_pool-autoscaling = {
   or = {
     default-node-pool = {
@@ -97,6 +107,18 @@ node_pool-autoscaling = {
     default-node-pool = {
       min_node_count = 1
       max_node_count = 3
+    }
+  }
+}
+
+node_pool-settings = {
+  or = {
+    general-purpose-001 = {
+      machine_type   = "n2-standard-2"
+      preemptible    = false
+      image_type     = "COS_CONTAINERD"
+      node_locations = ["us-west1-b"]
+      autoscaling    = { min_node_count = 1, max_node_count = 2 }
     }
   }
 }
