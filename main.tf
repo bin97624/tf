@@ -16,4 +16,6 @@ module "data" {
   node_pool-settings    = var.node_pool-settings
 
   # gke end #
+
+  cassandra_settings = var.cassandra_settings
 }

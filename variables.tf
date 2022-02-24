@@ -78,6 +78,23 @@ variable "node_pool-settings" {
 
 # gke end #
 
+# cassandra begin #
+
+variable cassandra_settings {
+  type = map(object({
+    name         = string
+    snet_name    = string
+    cidr         = string
+    region       = string
+    machine_type = string
+    disk_image   = string
+    disk_size    = number
+    vm_tag       = string
+  }))
+}
+
+# cassandra end #
+
 # project specified variables #
 
 # TBD #

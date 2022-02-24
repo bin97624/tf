@@ -125,6 +125,25 @@ node_pool-settings = {
 
 # gke end #
 
+# cassandra begin #
+
+cassandra_settings = {
+  or = {
+    name         = "cassandra-or"
+    snet_name    = "snet-cassandra-or"
+    cidr         = "10.26.64.0/24"
+    region       = "us-west1"
+
+    machine_type = "n2-standard-2"
+    disk_image   = "ubuntu-os-cloud/ubuntu-2004-lts"
+    disk_size    = 256
+
+    vm_tag       = "cassandra-or"
+  }
+}
+
+# cassandra end #
+
 # project specified settings #
 
 # TBD #
