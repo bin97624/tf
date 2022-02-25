@@ -41,10 +41,6 @@ variable "gitlab_runner_ips" {
   )
 }
 
-variable "gke_cidrs" {
-  type = map(string)
-}
-
 variable "gke_cidrs-settings" {
   type = map(object({
     gke_dataplane     = string

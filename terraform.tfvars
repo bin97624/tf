@@ -68,18 +68,6 @@ gitlab_runner_ips = [
   }
 ]
 
-gke_cidrs = {
-  gke_or_dataplane     = "10.6.132.0/24"
-  gke_or_controllplane = "10.6.136.0/28"
-  gke_or_pod           = "10.6.0.0/18"
-  gke_or_svc           = "10.6.128.0/24"
-  gke_or_glb           = "10.6.140.0/24"
-
-  gke_tw_dataplane     = "10.4.132.0/24"
-  gke_tw_controllplane = "10.4.136.0/28"
-  gke_tw_pod           = "10.4.0.0/18"
-  gke_tw_svc           = "10.4.128.0/24"
-  gke_tw_glb           = "10.4.140.0/24"
 }
 
 gke_cidrs-settings = {
@@ -89,6 +77,13 @@ gke_cidrs-settings = {
     gke_pod           = "10.6.0.0/18"
     gke_svc           = "10.6.128.0/24"
     gke_glb           = "10.6.140.0/24"
+  }
+  tw = {
+    gke_dataplane     = "10.4.132.0/24"
+    gke_controllplane = "10.4.136.0/28"
+    gke_pod           = "10.4.0.0/18"
+    gke_svc           = "10.4.128.0/24"
+    gke_glb           = "10.4.140.0/24"
   }
 }
 

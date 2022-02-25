@@ -10,7 +10,6 @@ module "data" {
   # gke begin #
 
   gitlab_runner_ips     = var.gitlab_runner_ips
-  gke_cidrs             = var.gke_cidrs
   gke_cidrs-settings    = var.gke_cidrs-settings
   node_pool-autoscaling = var.node_pool-autoscaling
   node_pool-settings    = var.node_pool-settings
