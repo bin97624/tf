@@ -78,14 +78,15 @@ variable "node_pool-settings" {
 
 variable cassandra_settings {
   type = map(object({
-    name         = string
-    snet_name    = string
-    cidr         = string
-    region       = string
-    machine_type = string
-    disk_image   = string
-    disk_size    = number
-    vm_tag       = string
+    name           = string
+    snet_name      = string
+    cidr           = string
+    region         = string
+    machine_type   = string
+    disk_image     = string
+    disk_size      = number
+    data_disk_size = number
+    vm_tag         = string
   }))
 }
 

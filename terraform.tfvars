@@ -68,8 +68,6 @@ gitlab_runner_ips = [
   }
 ]
 
-}
-
 gke_cidrs-settings = {
   or = {
     gke_dataplane     = "10.6.132.0/24"
@@ -124,14 +122,15 @@ node_pool-settings = {
 
 cassandra_settings = {
   or = {
-    name         = "cassandra-or"
-    snet_name    = "snet-cassandra-or"
-    cidr         = "10.26.64.0/24"
-    region       = "us-west1"
+    name           = "cassandra-or"
+    snet_name      = "snet-cassandra-or"
+    cidr           = "10.26.64.0/24"
+    region         = "us-west1"
 
-    machine_type = "n2-standard-2"
-    disk_image   = "ubuntu-os-cloud/ubuntu-2004-lts"
-    disk_size    = 256
+    machine_type   = "n2-standard-2"
+    disk_image     = "ubuntu-os-cloud/ubuntu-2004-lts"
+    disk_size      = 16
+    data_disk_size = 256
 
     vm_tag       = "cassandra-or"
   }
