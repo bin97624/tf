@@ -132,11 +132,31 @@ cassandra_settings = {
     disk_size      = 16
     data_disk_size = 256
 
-    vm_tag       = "cassandra-or"
+    vm_tag         = "cassandra-or"
   }
 }
 
 # cassandra end #
+
+# mongodb begin #
+
+mongodb_settings = {
+  or = {
+    name           = "mongodb-or"
+    snet_name      = "snet-mongodb-or"
+    cidr           = "10.26.32.0/24"
+    region         = "us-west1"
+
+    machine_type   = "n2-standard-2"
+    disk_image     = "ubuntu-os-cloud/ubuntu-2004-lts"
+    disk_size      = 16
+    data_disk_size = 256
+
+    vm_tag         = "mongodb-or"
+  }
+}
+
+# mongodb end #
 
 # project specified settings #
 

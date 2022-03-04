@@ -17,4 +17,5 @@ module "data" {
   # gke end #
 
   cassandra_settings = var.cassandra_settings
+  mongodb_settings   = var.mongodb_settings
 }

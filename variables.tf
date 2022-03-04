@@ -92,6 +92,24 @@ variable cassandra_settings {
 
 # cassandra end #
 
+# mongodb begin #
+
+variable mongodb_settings {
+  type = map(object({
+    name           = string
+    snet_name      = string
+    cidr           = string
+    region         = string
+    machine_type   = string
+    disk_image     = string
+    disk_size      = number
+    data_disk_size = number
+    vm_tag         = string
+  }))
+}
+
+# mongodb end #
+
 # project specified variables #
 
 # TBD #
