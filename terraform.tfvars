@@ -63,8 +63,8 @@ gitlab_runner_ips = [
     value = "34.105.22.224"
   },
   {
-    name  = "azure-aks-link-gcp-001"
-    value = "20.210.32.84"
+    name  = "azure-aks-stag-002-egress-for-linkerd-to-gcp"
+    value = "23.97.48.222"
   }
 ]
 
