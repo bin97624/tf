@@ -142,8 +142,8 @@ cassandra_settings = {
 
 mongodb_settings = {
   or = {
-    name           = "mongodb-or"
-    snet_name      = "snet-mongodb-or"
+    name           = "mongodbor"
+    snet_name      = "snet-mongodbor-001"
     cidr           = "10.26.32.0/24"
     region         = "us-west1"
 
@@ -152,7 +152,7 @@ mongodb_settings = {
     disk_size      = 16
     data_disk_size = 256
 
-    vm_tag         = "mongodb-or"
+    vm_tag         = "mongodbor"
   }
 }
 
