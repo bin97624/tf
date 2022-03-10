@@ -122,8 +122,8 @@ node_pool-settings = {
 
 cassandra_settings = {
   or = {
-    name           = "cassandra-or"
-    snet_name      = "snet-cassandra-or"
+    name           = "cassandraor"
+    snet_name      = "snet-cassandraor-001"
     cidr           = "10.26.64.0/24"
     region         = "us-west1"
 
@@ -132,7 +132,7 @@ cassandra_settings = {
     disk_size      = 16
     data_disk_size = 256
 
-    vm_tag         = "cassandra-or"
+    vm_tag         = "cassandraor"
   }
 }
 
