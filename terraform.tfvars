@@ -158,6 +158,26 @@ mongodb_settings = {
 
 # mongodb end #
 
+# kafka begin #
+
+kafka_settings = {
+  or = {
+    name           = "kafkaor"
+    snet_name      = "snet-kafkaor-001"
+    cidr           = "10.28.16.0/24"
+    region         = "us-west1"
+
+    machine_type   = "n2-standard-2"
+    disk_image     = "ubuntu-os-cloud/ubuntu-2004-lts"
+    disk_size      = 16
+    data_disk_size = 30
+
+    vm_tag         = "kafkaor"
+  }
+}
+
+# kafka end #
+
 # project specified settings #
 
 # TBD #

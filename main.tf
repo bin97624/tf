@@ -18,4 +18,5 @@ module "data" {
 
   cassandra_settings = var.cassandra_settings
   mongodb_settings   = var.mongodb_settings
+  kafka_settings     = var.kafka_settings
 }

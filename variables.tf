@@ -110,6 +110,24 @@ variable mongodb_settings {
 
 # mongodb end #
 
+# kafka begin #
+
+variable kafka_settings {
+  type = map(object({
+    name           = string
+    snet_name      = string
+    cidr           = string
+    region         = string
+    machine_type   = string
+    disk_image     = string
+    disk_size      = number
+    data_disk_size = number
+    vm_tag         = string
+  }))
+}
+
+# kafka end #
+
 # project specified variables #
 
 # TBD #
